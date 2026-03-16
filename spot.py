@@ -1,15 +1,16 @@
 import spotipy
 import FileManager
 import json
+import Data
 from spotipy.oauth2 import SpotifyOAuth
 
 scope = "playlist-modify-public playlist-modify-private user-library-read"
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id="a9d6e2768a5d4cfa82c1d81aee5a935c",
-    client_secret="7ed8610f713c42a989b902aafa8b0dee",
-    redirect_uri="http://127.0.0.1:8000/callback",
-    scope=scope
+    client_id = Data.client_id,
+    client_secret = Data.client_secret,
+    redirect_uri = "http://127.0.0.1:8000/callback",
+    scope = scope
 ))
 
 #Take ID

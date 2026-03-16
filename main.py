@@ -8,8 +8,9 @@ def parseLink(link):
     srcMatch = re.search(r'src="([^"]+)"', link)
     if srcMatch:
         src = srcMatch.group(1)
-    playlistNumber = src.split('/')[-1]
-    Data.Playlist = playlistNumber
+    playlistNumber = src.split('/')
+    Data.Playlist = playlistNumber[-1]
+    Data.User = playlistNumber[-2]
 
 
 def printTrack(playlist):
