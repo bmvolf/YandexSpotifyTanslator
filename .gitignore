@@ -1,2 +1,5 @@
 zagl.py
 Data.py
+.cache
+file.txt
+__pycache__
